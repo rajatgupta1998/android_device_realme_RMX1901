@@ -34,10 +34,6 @@ $(call inherit-product, device/realme/sdm710-common/sdm710.mk)
 PRODUCT_PACKAGES += \
     vendor.lineage.camera.motor@1.0-service.realme_sdm710
 
-# HIDL
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/manifest.xml:system/etc/manifest.xml
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
