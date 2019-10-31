@@ -16,29 +16,6 @@ cc_library_shared {
     ],
     static_libs: [
         "android.hardware.sensors@1.0-convert",
-        "multihal.realme_sdm710",
+        "multihal",
     ],
 }
-
-cc_library_static {
-    name: "multihal.realme_sdm710",
-    srcs: [
-        "multihal.cpp",
-        "SensorEventQueue.cpp",
-    ],
-    header_libs: [
-        "libhardware_headers",
-    ],
-    shared_libs: [
-        "liblog",
-        "libcutils",
-        "libutils",
-        "libdl",
-    ],
-    export_include_dirs: ["."],
-    cflags: [
-        "-Wall",
-        "-Werror",
-    ],
-}
-
