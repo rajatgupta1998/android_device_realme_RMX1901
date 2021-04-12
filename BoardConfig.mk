@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from Xiaomi sdm710-common
+# Inherit from Realme sdm710-common
 include device/realme/sdm710-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/realme/RMX1901
@@ -27,6 +27,8 @@ TARGET_KERNEL_CONFIG := RMX1901_defconfig
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_MANIFEST_FILE)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
